@@ -14,7 +14,7 @@ export class ReviewsService {
     }
 
     reviews(restaurantId: string): Observable<Review[]>{
-        return this.http.get(`${MEAT_API}/restaurants/${restaurantId}/restaurants`)
+        return this.http.get(`${MEAT_API}/restaurants/${restaurantId}/reviews`)
             .map(response => response.json())
             .catch(ErrorHandler.handleError);
     }
